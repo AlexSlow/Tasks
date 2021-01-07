@@ -5,8 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="187.0" prefWidth="358.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ModalController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="219.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Construct.ModalController">
    <top>
       <Label text="Создание нового параметра" BorderPane.alignment="CENTER">
          <font>
@@ -15,8 +14,18 @@
       </Label>
    </top>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER">
          <children>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="358.0" spacing="5.0">
+               <children>
+                  <Label text="Наименование параметра">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="name_param" />
+               </children>
+            </HBox>
             <HBox alignment="CENTER" prefHeight="51.0" prefWidth="358.0" spacing="5.0">
                <children>
                   <Label text="Тип параметра">
@@ -27,7 +36,8 @@
                   <ComboBox fx:id="combo_type" prefWidth="150.0" />
                </children>
             </HBox>
-            <VBox fx:id="mainModalVBox" prefHeight="200.0" prefWidth="100.0" />
+            <HBox fx:id="HboxColumn" alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0" />
+            <VBox fx:id="mainModalVBox" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" />
          </children>
       </VBox>
    </center>

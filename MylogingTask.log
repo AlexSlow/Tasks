@@ -68,3 +68,7 @@ DEBUG ConventorFactoryImpl:20 - Фабрика работает
 DEBUG ConventorFactoryImpl:20 - Фабрика работает
 DEBUG ConventorFactoryImpl:20 - Фабрика работает
 DEBUG ConventorFactoryImpl:20 - Фабрика работает
+ERROR ConventorFactoryImpl:40 - Не найден преобразователь!
+ERROR FileSerializator:28 - Ошибка сериализации в файл
+ERROR FileSerializator:28 - Ошибка сериализации в файл
+ERROR FileSerializator:42 - Ошибка дессериализации в файл

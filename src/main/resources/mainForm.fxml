@@ -1,29 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<AnchorPane prefHeight="296.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Construct.Controller">
    <children>
-      <VBox fx:id="mainVbox" alignment="CENTER" prefHeight="153.0" prefWidth="359.0" spacing="5.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <HBox alignment="CENTER_LEFT" spacing="5.0">
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="474.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Файл">
+            <items>
+              <MenuItem fx:id="save_in_file" mnemonicParsing="false" text="Сохранить конфигурацию" />
+                  <MenuItem fx:id="load_configuraton" mnemonicParsing="false" text="Загрузить конфигурацию" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Помощь">
+            <items>
+              <MenuItem mnemonicParsing="false" text="О программе" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <VBox alignment="TOP_CENTER" layoutY="38.0" prefHeight="257.0" prefWidth="474.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="38.0">
          <children>
-            <Button fx:id="bt_delete" mnemonicParsing="false" text="Удалить" BorderPane.alignment="CENTER">
+            <Label fx:id="name_configuration" text="Название конфигурации">
                <font>
-                  <Font size="14.0" />
-               </font></Button>
-            <Button fx:id="bt_save" lineSpacing="10.0" mnemonicParsing="false" text="Сохранить">
-               <font>
-                  <Font size="14.0" />
-               </font></Button>
-            <Button fx:id="bt_add" mnemonicParsing="false" text="Добавить">
-               <font>
-                  <Font size="14.0" />
-               </font></Button>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="153.0" prefViewportWidth="359.0" VBox.vgrow="NEVER">
+               <content>
+                  <VBox fx:id="mainVbox" alignment="CENTER" prefHeight="153.0" prefWidth="359.0" spacing="5.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <children>
+                  <Button fx:id="bt_add" mnemonicParsing="false" text="Добавить">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bt_delete" mnemonicParsing="false" text="Удалить" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bt_save" lineSpacing="10.0" mnemonicParsing="false" text="Сохранить">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
          </children>
-      </HBox>
+      </VBox>
    </children>
-</VBox>
+</AnchorPane>

@@ -1,3 +1,4 @@
+import Construct.Constructor;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,10 +12,15 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
       //log.info("Начало работы программы");
-        Parent root = FXMLLoader.load(getClass().getResource("mainForm.fxml"));
+       Parent root = FXMLLoader.load(Main.class.getResource("mainForm.fxml"));
+
         primaryStage.setTitle("Задачи");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+
+      //  Constructor constructor=new Constructor();
+        // constructor.open(Main.class.getResource("mainForm.fxml"));
+
     }
 
     public static void main(String[] args) {

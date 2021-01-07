@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="156.0" prefWidth="295.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Construct.ChangeNameModalController">
+   <top>
+      <Label text="Изменение названия кофигурации" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <HBox alignment="CENTER" prefHeight="114.0" prefWidth="321.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label lineSpacing="5.0" text="Новое название:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="new_name_configuration" />
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <Button fx:id="bt_save" mnemonicParsing="false" text="Сохранить" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
