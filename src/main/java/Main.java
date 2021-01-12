@@ -12,14 +12,14 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
       //log.info("Начало работы программы");
-       Parent root = FXMLLoader.load(Main.class.getResource("mainForm.fxml"));
+       Parent root = FXMLLoader.load(Main.class.getResource("primaryPage.fxml"));
 
-        primaryStage.setTitle("Задачи");
+        primaryStage.setTitle("Конфигурации");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
 
       //  Constructor constructor=new Constructor();
-        // constructor.open(Main.class.getResource("mainForm.fxml"));
+        // constructor.open(Main.class.getResource("Constructor.fxml"));
 
     }
 

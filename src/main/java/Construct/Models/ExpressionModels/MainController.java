@@ -16,6 +16,6 @@ public class MainController {
    public void initModel(String name)
    {
    model=new ModelImpl();
-   model.setName(name);
+   model.getConfigurationMap().setConfigName(name);
    }
 }

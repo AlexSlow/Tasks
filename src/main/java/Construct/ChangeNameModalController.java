@@ -21,7 +21,7 @@ public class ChangeNameModalController {
         bt_save.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                mainController.getModel().setName(new_name_configuration.getText());
+                mainController.getModel().getConfigurationMap().setConfigName(new_name_configuration.getText());
                 mainController.getView().repaintNameConfiguration(new_name_configuration.getText());
                 Stage stage = (Stage) bt_save.getScene().getWindow();
                 stage.close();

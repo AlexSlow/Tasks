@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="107.0" prefWidth="293.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreateConfigController">
+   <center>
+      <VBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="261.0">
+         <children>
+            <HBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <Label text="Название:" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameConfiguration" prefHeight="25.0" prefWidth="197.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="320.0" spacing="5.0">
+               <children>
+                  <Label text="Файл">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tb_file" prefHeight="25.0" prefWidth="205.0" />
+                  <Button fx:id="bt_file_chooser" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="..." />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Button fx:id="bt_save" mnemonicParsing="false" text="Сохранить" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

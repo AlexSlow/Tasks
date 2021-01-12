@@ -26,7 +26,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../alfa" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Shugge_Table" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -83,6 +83,11 @@
       <workItem from="1609991396949" duration="6813000" />
       <workItem from="1610009375081" duration="8454000" />
       <workItem from="1610039729871" duration="1865000" />
+      <workItem from="1610105711582" duration="12231000" />
+      <workItem from="1610121816993" duration="141000" />
+      <workItem from="1610122252112" duration="4198000" />
+      <workItem from="1610440127837" duration="9246000" />
+      <workItem from="1610469297265" duration="4926000" />
     </task>
     <servers />
   </component>
@@ -90,38 +95,42 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1610012024533">
+    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1610125655680">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1610012024533" />
-    <state x="365" y="287" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1610013466484">
+    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1610125655680" />
+    <state x="365" y="287" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1610472683895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="365" y="287" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1610013466484" />
+    <state x="365" y="287" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1610472683895" />
     <state x="466" y="231" width="433" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1610012274202">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="466" y="231" width="433" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1610012274202" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1609996561524">
+    <state x="416" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1610442877951">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609996561524" />
-    <state width="1322" height="130" key="GridCell.Tab.0.bottom" timestamp="1610041609791">
+    <state x="416" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1610442877951" />
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1610444292961">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="130" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610041609791" />
-    <state width="1322" height="130" key="GridCell.Tab.0.center" timestamp="1610041609791">
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610444292961" />
+    <state width="1322" height="109" key="GridCell.Tab.0.bottom" timestamp="1610473972029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="130" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1610041609791" />
-    <state width="1322" height="130" key="GridCell.Tab.0.left" timestamp="1610041609790">
+    <state width="1322" height="109" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610473972029" />
+    <state width="1322" height="109" key="GridCell.Tab.0.center" timestamp="1610473972029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="130" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1610041609790" />
-    <state width="1322" height="130" key="GridCell.Tab.0.right" timestamp="1610041609791">
+    <state width="1322" height="109" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1610473972029" />
+    <state width="1322" height="109" key="GridCell.Tab.0.left" timestamp="1610473972029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="130" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1610041609791" />
+    <state width="1322" height="109" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1610473972029" />
+    <state width="1322" height="109" key="GridCell.Tab.0.right" timestamp="1610473972029">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="109" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1610473972029" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1608860791704">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -130,5 +139,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="352" y="160" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1609712008337" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1610124262853">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610124262853" />
   </component>
 </project>

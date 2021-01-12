@@ -1,5 +1,6 @@
 package Construct.Models.MainModel;
 
+import Config.ConfigurationMap;
 import Construct.Models.ExpressionModels.AbstractExcpression;
 import lombok.Data;
 
@@ -8,11 +9,13 @@ import java.util.*;
 
 @Data
 public class ModelImpl implements Model, Serializable {
-    private String name;
-    private List<AbstractExcpression> excpressions;
-   // private View view;
+    private static final long serialVersionUID = 4L;
+    transient private ConfigurationMap configurationMap;
+   // private String name;
+    private List<AbstractExcpression> excpressions=new ArrayList<>();
+
     public ModelImpl(){
-        excpressions=new ArrayList<>();
+
     }
     @Override
     public List<AbstractExcpression> expressions() {
@@ -54,10 +57,15 @@ public class ModelImpl implements Model, Serializable {
     @Override
     public Map<String, String> getMap() {
         Map<String,String> map=new HashMap<>();
-        map.put("Название конфигурации",this.name);
+        map.put("Название конфигурации",configurationMap.getConfigName());
         excpressions.forEach(exp->{
             map.put(exp.getName(),exp.getValue());
         });
         return map;
+    }
+
+    @Override
+    public String getName() {
+      return configurationMap.getConfigName();
     }
 }

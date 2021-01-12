@@ -1,7 +1,9 @@
 package Construct;
 
+import Config.ConfigurationMap;
 import Construct.Models.ExpressionModels.*;
 import Construct.Models.MainModel.Model;
+import Serializators.FileProgrammSerializator;
 import Serializators.FileSerializator;
 import Serializators.Serializator;
 import Construct.ViewConventors.*;
@@ -50,52 +52,37 @@ public class Controller {
     private MenuItem load_configuraton;
     private MainController mainController;
 
-    @FXML
-    public void initialize() {
+
+    private Model model;
+    private View view;
+
+    public void initModel()
+    {
+        //Скорее всего будет передаваться извне
         MainController mainController=new MainController();
-        View view = new View();
+        view = new View();
         view.setMainPane(mainVbox);
         view.setName(name_configuration);
         mainController.setView(view);
-        mainController.initModel("Тестовая конфигурация");
-
-        MapExpression mapExpression = new MapExpression();
-        mapExpression.setName("Параметр первый");
-        mainController.getModel().add(mapExpression);
-        MapExpression mapExpression2 = new MapExpression();
-        mapExpression2.setName("Параметр второй");
-        mainController.getModel().add(mapExpression2);
-
-        List<String> stringArrayList = new ArrayList();
-        stringArrayList.addAll(Arrays.asList("Параметр1", "Параметр2", "Параметр3"));
-        SelectExpression selectExpression = new SelectExpression();
-        selectExpression.setName("Селект выражение");
-        selectExpression.setDataList(stringArrayList);
-        selectExpression.setValue("Параметр2");
-        mainController.getModel().add(selectExpression);
-
-        LongTextExpression longTextExpression = new LongTextExpression();
-        longTextExpression.setName("Примечание");
-        longTextExpression.setValue(" введите текст");
-        mainController.getModel().add(longTextExpression);
-        view.repaint(mainController.getModel());
+        mainController.setModel(model);
+        mainController.repaint();
 
 
         save_in_file.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                 Serializator serializator=new FileSerializator();
-                 serializator.serialize(mainController.getModel());
+                Serializator serializator=new FileSerializator();
+                serializator.serialize(mainController.getModel());
             }
         });
         load_configuraton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-              Serializator serializator=new FileSerializator();
-              Optional<Model> model= serializator.deserialize();
-              if (model.isPresent())
-              mainController.setModel(model.get());
-              mainController.repaint();
+                Serializator serializator=new FileSerializator();
+                Optional<Model> model= serializator.deserialize();
+                if (model.isPresent())
+                    mainController.setModel(model.get());
+                mainController.repaint();
             }
         });
         bt_delete.setOnAction(new EventHandler<ActionEvent>() {
@@ -121,9 +108,11 @@ public class Controller {
                 stage.setTitle("Окно выбора параметра");
                 stage.initModality(Modality.WINDOW_MODAL);
                 stage.initOwner(((Node)event.getSource()).getScene().getWindow());
-              ModalController modalController=loader.getController();
-              modalController.setMainController(mainController);
-              stage.showAndWait();
+                ModalController modalController=loader.getController();
+                modalController.setMainController(mainController);
+                stage.showAndWait();
+
+                mainController.getView().unload();
 
             }
         });
@@ -131,8 +120,9 @@ public class Controller {
         bt_save.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                mainController.getView().unload();
-             // System.out.println(mainController.getModel().getMap());
+                //mainController.getView().unload();
+                Serializator serializator=new FileProgrammSerializator(mainController.getModel().getConfigurationMap());
+                serializator.serialize(mainController.getModel());
             }
         });
 
@@ -141,6 +131,7 @@ public class Controller {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 if(mouseEvent.getButton().equals(MouseButton.PRIMARY)){
+
                     if(mouseEvent.getClickCount() == 2){
                         Stage stage = new Stage();
                         FXMLLoader loader=new FXMLLoader();
@@ -155,11 +146,14 @@ public class Controller {
                         ChangeNameModalController changeNameModalController=loader.getController();
                         changeNameModalController.setMainController(mainController);
                         stage.showAndWait();
+
                     }
                 }
             }
         });
-
+    }
+    @FXML
+    public void initialize() {
     }
 
 }

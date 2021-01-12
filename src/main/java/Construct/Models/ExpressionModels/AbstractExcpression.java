@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 @Data
 public abstract class AbstractExcpression implements Serializable {
+    private static final long serialVersionUID = 4L;
     private static Integer IDCOUNTER=0;
     private String name;
     private Integer id=IDCOUNTER++;

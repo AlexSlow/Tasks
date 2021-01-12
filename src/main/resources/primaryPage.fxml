@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PrimaryController">
    <center>
       <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-        <columns>
-          <TableColumn prefWidth="230.0" text="Название конфигурации" />
-          <TableColumn minWidth="0.0" prefWidth="202.0" text="Файл конфигурации" />
-        </columns>
-      </TableView>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin></TableView>
    </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="37.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="bt_create_new_configuration" mnemonicParsing="false" text="Создать новую конфигурацию" />
+            <Button fx:id="bt_save_changes" mnemonicParsing="false" text="Применить изменения" />
+            <Button fx:id="bt_delete_conf" mnemonicParsing="false" text="Удалить" />
+            <Button fx:id="open_constuctor" mnemonicParsing="false" text="Открыть конструктор" />
+         </children>
+      </HBox>
+   </bottom>
    <top>
-      <Label text="Конфигурации" BorderPane.alignment="CENTER">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Файл">
+            <items>
+              <MenuItem fx:id="settingsMenuItem" mnemonicParsing="false" text="Настройки" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
    </top>
 </BorderPane>

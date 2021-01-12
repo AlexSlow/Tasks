@@ -1,6 +1,8 @@
 package Serializators;
 
+import Config.ConfigurationMap;
 import Construct.Models.MainModel.Model;
+import Construct.Models.MainModel.ModelImpl;
 import lombok.Data;
 import lombok.extern.log4j.Log4j;
 
@@ -8,21 +10,22 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Optional;
 @Data
 @Log4j
 public class FileProgrammSerializator implements Serializator {
-    private Optional<Path> file;
-    public FileProgrammSerializator(Path path) {
-        this.file=Optional.of(path);
+    private ConfigurationMap configurationMap;
+    public FileProgrammSerializator(ConfigurationMap configurationMap) {
+        this.configurationMap=configurationMap;
     }
 
     public void serialize(Model model)
     {
-        if (file.isPresent())
+        if (configurationMap!=null)
         {
-            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file.get().toFile()))) {
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(configurationMap.getFile().toFile()))) {
                 oos.writeObject(model);
             } catch (Exception ex) {
                 ex.printStackTrace();
@@ -32,8 +35,9 @@ public class FileProgrammSerializator implements Serializator {
     }
     @Override
     public Optional<Model> deserialize() {
-        if (file.isPresent()) {
-            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file.get().toFile()))){
+        if (configurationMap!=null) {
+
+            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(configurationMap.getFile().toFile()))){
                 Model model=(Model) ois.readObject();
                 return Optional.of(model);
             } catch (Exception ex) {
@@ -41,6 +45,9 @@ public class FileProgrammSerializator implements Serializator {
                 log.error("Ошибка дессериализации в файл");
             }
         }
-        return Optional.empty();
+        log.debug("Инициализация модели по умолчанию");
+        Model model=new ModelImpl();
+      //  model.setConfigurationMap(configurationMap);
+        return Optional.of(model);
     }
 }

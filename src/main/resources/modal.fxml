@@ -23,7 +23,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="name_param" />
+                  <TextField fx:id="name_param" promptText="название параметра" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="51.0" prefWidth="358.0" spacing="5.0">

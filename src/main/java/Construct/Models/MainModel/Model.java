@@ -1,5 +1,6 @@
 package Construct.Models.MainModel;
 
+import Config.ConfigurationMap;
 import Construct.Models.ExpressionModels.AbstractExcpression;
 
 import java.util.List;
@@ -12,8 +13,9 @@ public interface Model {
    void add(AbstractExcpression abstractExcpression);
    void delete(List<Integer> ids);
     Optional<AbstractExcpression> getById(Integer id);
-    void setName(String name);
+    //void setName(String name);
     String getName();
     Map<String,String> getMap();
-   // void repaint();
+    ConfigurationMap getConfigurationMap();
+    void setConfigurationMap(ConfigurationMap configurationMap);
 }
